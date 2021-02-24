@@ -17,7 +17,7 @@ body {
 a {
   color: #fff;
 }
-h1, h2 {
+h1, h2, h3, h5 {
   line-height: 1.4;
 }
 
@@ -35,7 +35,7 @@ h1, h2 {
 }
 
 .btn:active {
-  outline: none;
+  outline: #fff;
 }
 
 .screen {
@@ -48,7 +48,38 @@ h1, h2 {
 }
 
 .screen.up {
-  margin-top: -100vh;
+  margin-top: -200vh;
+}
+
+.fruits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.fruits-list li {
+  margin: 10px;
+}
+
+.choose-fruit-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+.choose-fruit-btn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+.choose-fruit-btn:active {
+  background-color: rgba(225, 225, 225, 0.7);
 }
 
 .choose-fruit-btn img {
