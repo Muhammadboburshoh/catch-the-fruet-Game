@@ -36,6 +36,21 @@ choose_fruit_btns.forEach(btn => {
   })
 })
 
+function startGame () {
+  setInterval(increaseTime, 1000);
+}
+
+function increaseTime () {
+  let m = Math.floor(seconds / 60)
+  let s = seconds % 60
+
+  m = m < 10 ? `0${m}` : m
+  s = s < 10 ? `0${s}` : m
+
+  timeEl.innerHTML = `Time : ${m}:${s}`
+  seconds++
+}
+
 function createFruit () {
   const fruit = document.createElement("div")
   fruit.classList.add("fruit")
@@ -54,8 +69,29 @@ function getRendomLocation () {
   const width = window.innerWidth
   const heigth = window.innerHeight
 
-  const x = Math.rendom() * (width -200) + 100
-  const y = Math.rendom() * (heigth -200) + 100
+  const x = Math.random() * (width - 200) + 100
+  const y = Math.random() * (heigth - 200) + 100
 
   return {x, y}
+}
+
+function catchFruit () {
+  increaseScore()
+  this.classList.add("caught")
+  setTimeout(() => this.remove(), 1000)
+  addFruits()
+}
+
+function addFruits () {
+  setTimeout(createFruit, 1000)
+  setTimeout(createFruit, 1500)
+}
+
+function increaseScore() {
+  score++
+  if(score > 3) {
+
+    massageEl.classList.add("visible")
+  }
+  scoreEl.innerHTML = `Score: ${score}`
 }
