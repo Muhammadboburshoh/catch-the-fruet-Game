@@ -70,7 +70,7 @@ function getRendomLocation () {
   const heigth = window.innerHeight
 
   const x = Math.random() * (width - 200) + 100
-  const y = Math.random() * (heigth - 200) + 100
+  const y = Math.random() * (heigth - 10) + 100
 
   return {x, y}
 }
