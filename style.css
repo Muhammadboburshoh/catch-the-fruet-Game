@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #516dff;
+  background-color: #123;
   color: #fff;
   font-family: 'Press Start 2P', sans-serif;
   height: 100vh;
@@ -24,7 +24,7 @@ h1, h2, h3, h5 {
 .btn {
   border: 0;
   background-color: #fff;
-  color: #516dff;
+  color: blue;
   padding: 15px 20px;
   font-family: inherit;
   cursor: pointer;
@@ -45,6 +45,7 @@ h1, h2, h3, h5 {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  transition: margin 0.5s ease-out;
 }
 
 .screen.up {
@@ -84,4 +85,62 @@ h1, h2, h3, h5 {
 
 .choose-fruit-btn img {
   object-fit: contain;
+}
+
+.game-container {
+  position: relative;
+}
+
+.time, .score {
+  position: absolute;
+  top: 20px;
+}
+
+.time {
+  left: 20px;
+}
+
+.score {
+  right: 20px;
+}
+
+.massage {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 1.7;
+  opacity: 0;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: transform 1s cubic-bezier(0.73,-0.37, 0.28, 0.99);
+}
+
+.massage.visible {
+  transform: translate(-50%, 150%);
+  opacity: 1;
+}
+
+.fruit {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in;
+}
+
+.fruit.caught {
+  transform: translate(-50%, -50%) scale(0);
+  
+}
+
+.fruit img {
+  width: 100px;
+  height: 100px;
 }

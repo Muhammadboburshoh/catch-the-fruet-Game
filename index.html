@@ -12,48 +12,51 @@
 <body>
 
   <div class="screen">
-    <h1>Catch the Fruit</h1>
-    <button class="btn" id="start-btn">Play Game</button>
+    <h1>Meavalarni Tutib Oling</h1>
+    <button class="btn" id="start-btn">O'yinni Boshlash</button>
   </div>
 
   <div class="screen">
-    <h2>Which fruit do you want to catch?</h2>
+    <h2>Yaxshi ko'rgan mevangizni tanlang</h2>
+    
 
     <ul class="fruits-list">
       <li>
         <button class="choose-fruit-btn">
-          <p>Apple</p>
+          <p>Olma</p>
           <img src="./img/apple.png" width="100" height="100" alt="Apple">
         </button>
       </li>
 
       <li>
         <button class="choose-fruit-btn">
-          <p>Apple</p>
+          <p>Banan</p>
           <img src="./img/banana.png" width="100" height="100" alt="Apple">
         </button>
       </li>
 
       <li>
         <button class="choose-fruit-btn">
-          <p>Apple</p>
+          <p>Tarvuz</p>
           <img src="./img/watermelon.png" width="100" height="100" alt="Apple">
         </button>
       </li>
 
       <li>
         <button class="choose-fruit-btn">
-          <p>Apple</p>
+          <p>Nok</p>
           <img src="./img/pear.png" width="100" height="100" alt="Apple">
         </button>
       </li>
     </ul>
+
+    <p>Qisqa vaqt ichida neachta meva tuta olar eaknsiz 😃</p>
   </div>
 
-  <div class="screen game-container">
-    <h3 id="time">Time: 00:00</h3>
-    <h3 id="score">Score: 0</h3>
-    <h5>Are you annoyed yet? <br>
+  <div class="screen game-container" id="game-container">
+    <h3 id="time" class="time">Time: 00:00</h3>
+    <h3 id="score" class="score">Score: 0</h3>
+    <h5 class="massage">Are you annoyed yet? <br>
      You are playing an impossible game!!
     </h5>
   </div>
