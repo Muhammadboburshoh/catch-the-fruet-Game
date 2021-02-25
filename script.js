@@ -89,7 +89,7 @@ function addFruits () {
 
 function increaseScore() {
   score++
-  if(score > 3) {
+  if(score > 19) {
 
     massageEl.classList.add("visible")
   }
