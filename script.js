@@ -45,7 +45,7 @@ function increaseTime () {
   let s = seconds % 60
 
   m = m < 10 ? `0${m}` : m
-  s = s < 10 ? `0${s}` : m
+  s = s < 60 ? `0${s}` : m
 
   timeEl.innerHTML = `Time : ${m}:${s}`
   seconds++
@@ -70,7 +70,7 @@ function getRendomLocation () {
   const heigth = window.innerHeight
 
   const x = Math.random() * (width - 200) + 100
-  const y = Math.random() * (heigth - 10) + 100
+  const y = Math.random() * (heigth - 200) + 100
 
   return {x, y}
 }
